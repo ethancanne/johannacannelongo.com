@@ -1,0 +1,29 @@
+@import '../../global.scss';
+.wrapper {
+  margin: 0;
+  padding: 0;
+  margin-top: -80px;
+
+  .container {
+    margin-top: -20px;
+    padding: 0;
+    background-color: $background-secondary;
+    .title {
+      margin: 0;
+      padding: 0;
+      font-family: 'IvyPresto Headline';
+      text-align: center;
+      font-weight: 100;
+      font-size: 50px;
+    }
+    p {
+      font-family: 'PT Sans Caption', sans-serif;
+      font-weight: 100;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

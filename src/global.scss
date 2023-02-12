@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'Header';
+  src: url('/static/fonts/header-font.ttf') format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Header';
+  src: url('/static/fonts/header-bold.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Body';
+  src: url('/static/fonts/body-regular.woff2') format('woff2');
+}
+
+//create a mobile mixin
+@mixin mobile {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+
+$dark: #707070;
+$background: #f7f4f2;
+$background-secondary: #ece6da;
+$accent: #ebd8c8;
+body {
+  background-color: $background;
+  font-family: 'PT Sans Caption', sans-serif;
+  font-style: normal;
+  margin: 0;
+}

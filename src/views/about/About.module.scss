@@ -1,0 +1,158 @@
+@import '../../global.scss';
+
+.container {
+  font-size: 40px;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  // gap: 200px;
+  padding-left: 30px;
+
+  @include mobile {
+    flex-direction: column-reverse;
+    padding: 25px;
+    padding-top: 0;
+  }
+
+  // font-weight: 100;/
+
+  .descriptionContainer {
+    font-size: 20px;
+    min-width: 550px;
+
+    //Now clamp the padding to 200px
+    padding-top: 150px;
+    padding-left: 60px;
+    padding-right: clamp(100px, 10vw, 200px);
+    @include mobile {
+      min-width: 0;
+      padding: 20px;
+    }
+
+    color: #707070;
+    .name {
+      font-family: 'IvyPresto Headline';
+      font-weight: 100;
+      font-size: 34px;
+      margin: 0;
+      span {
+        font-weight: 900;
+        color: black;
+        font-size: 35px;
+      }
+    }
+
+    .pointsContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 1px 10px;
+      width: fit-content;
+
+      .point {
+        font-weight: 900;
+        font-size: 16px;
+        margin: 0;
+
+        &::before {
+          content: '•';
+          color: #ebd8c8;
+          margin-right: 5px;
+          position: relative;
+          top: 6px;
+          font-size: 30px;
+        }
+      }
+    }
+
+    .description {
+      font-size: 17px;
+      font-weight: 100;
+      line-height: 40px;
+      color: black;
+    }
+
+    .buttonContainer {
+      margin: 10px 0;
+
+      display: flex;
+      gap: 20px;
+
+      .button {
+        font-family: 'IvyPresto Headline';
+
+        font-weight: 900;
+
+        font-size: 17px;
+        padding: 10px 20px;
+        min-width: 80px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        border: black 1px solid;
+        border-radius: 5px;
+      }
+    }
+    .socialContainer {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      .socialLink {
+        text-decoration: none;
+        .socialIcon {
+          color: wheat;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+  .imageContainer {
+    //make a background image in this css please
+    background-image: url('https://wallpaperaccess.com/full/3723619.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 90px 90px;
+    margin-top: 100px;
+    width: 100%;
+
+    position: relative;
+
+    @include mobile {
+      transform: translateY(0%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 0;
+
+      position: initial;
+    }
+
+    //generates a white overlay accross the image
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.626);
+    }
+
+    .image {
+      position: relative;
+      left: -150px;
+      border-radius: 10px;
+      max-width: clamp(200px, 20vw, 400px);
+      max-height: 600px;
+      object-fit: cover;
+      @include mobile {
+        left: 0;
+      }
+
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+}
