@@ -1,16 +1,21 @@
 @font-face {
-  font-family: 'Header';
-  src: url('/static/fonts/header-font.ttf') format('truetype');
+  font-family: 'IvyPresto';
+  src: url('/fonts/IvyPrestoLight.ttf') format('truetype');
   font-weight: 100;
 }
 @font-face {
-  font-family: 'Header';
-  src: url('/static/fonts/header-bold.ttf') format('truetype');
+  font-family: 'IvyPresto';
+  src: url('/fonts/IvyPresto.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'IvyPresto';
+  src: url('/fonts/IvyPrestoBold.ttf') format('truetype');
   font-weight: 900;
 }
 @font-face {
-  font-family: 'Body';
-  src: url('/static/fonts/body-regular.woff2') format('woff2');
+  font-family: 'PTSans';
+  src: url('/fonts/PTSans.ttc') format('truetype');
 }
 
 //create a mobile mixin
@@ -26,7 +31,7 @@ $background-secondary: #ece6da;
 $accent: #ebd8c8;
 body {
   background-color: $background;
-  font-family: 'PT Sans Caption', sans-serif;
+  font-family: 'PTSans', sans-serif;
   font-style: normal;
   margin: 0;
 }
