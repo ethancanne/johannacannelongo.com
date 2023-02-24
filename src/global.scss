@@ -1,20 +1,20 @@
 @font-face {
-  font-family: 'IvyPresto';
+  font-family: 'Header';
   src: url('/fonts/IvyPrestoLight.ttf') format('truetype');
   font-weight: 100;
 }
 @font-face {
-  font-family: 'IvyPresto';
+  font-family: 'Header';
   src: url('/fonts/IvyPresto.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'IvyPresto';
+  font-family: 'Header';
   src: url('/fonts/IvyPrestoBold.ttf') format('truetype');
   font-weight: 900;
 }
 @font-face {
-  font-family: 'PTSans';
+  font-family: 'Body';
   src: url('/fonts/PTSans.ttc') format('truetype');
 }
 
@@ -29,9 +29,10 @@ $dark: #707070;
 $background: #f7f4f2;
 $background-secondary: #ece6da;
 $accent: #ebd8c8;
+$accent-secondary: #9a8d83;
 body {
   background-color: $background;
-  font-family: 'PTSans', sans-serif;
+  font-family: 'Body';
   font-style: normal;
   margin: 0;
 }

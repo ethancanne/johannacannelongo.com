@@ -1,0 +1,152 @@
+@import '../../../../global.scss';
+.container {
+  margin-top: -10px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    background-color: rgb(248, 247, 245);
+  }
+  .descriptionContainer {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+
+    @include mobile {
+      padding: 130px 40px;
+    }
+
+    .title {
+      font-family: 'Header';
+      font-weight: 900;
+      font-size: 50px;
+      margin: 0;
+      width: 100%;
+    }
+    .quote {
+      width: 100%;
+
+      font-family: 'Header';
+      font-weight: 400;
+      font-size: 34px;
+      margin: 10px 0;
+      color: $accent-secondary;
+      span {
+        font-weight: 900;
+        color: black;
+        font-size: 35px;
+      }
+    }
+    .introText {
+      font-size: 20px;
+      line-height: 40px;
+      margin-bottom: 70px;
+      min-width: 400px;
+    }
+    .button {
+      font-family: 'Header';
+
+      font-weight: 900;
+
+      font-size: 17px;
+      padding: 10px 50px;
+      min-width: 80px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      background-color: $accent-secondary;
+      border-radius: 5px;
+    }
+  }
+  .imageContainer {
+    padding: 200px;
+    margin: 0;
+    background-image: url('/images/HopesGarden4.jpeg');
+    background-size: cover;
+    background-position: 100% 150%;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    @include mobile {
+      order: -1;
+      position: initial;
+      padding: 20px;
+      background-position: 100% 100%;
+    }
+
+    .wave {
+      position: absolute;
+      height: 101%;
+      top: -10px;
+      left: -30px;
+      z-index: 2;
+
+      img {
+        height: 100.4%;
+        // width: fit-content;
+      }
+
+      &.wave2 {
+        z-index: 1;
+
+        left: 0px;
+      }
+
+      @include mobile {
+        display: none;
+        // bottom: -40px;
+        // left: 0;
+        // rotate: 90deg;
+        // img {
+        //   height: 200px;
+        //   width: 100%;
+        // }
+        // &.wave2 {
+        //   bottom: -50px;
+        // }
+      }
+    }
+
+    //add an overlay to the image
+    // &:before {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(255, 255, 255, 0.188);
+    //   border-radius: 20px;
+    // }
+
+    .image {
+      position: relative;
+      left: -140px;
+      border-radius: 10px;
+      max-width: 350px;
+      max-height: 600px;
+      z-index: 3;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      border-radius: 20px;
+
+      @include mobile {
+        // left: 0;
+        //put this absolute image in the middle
+        left: 50%;
+        transform: translateX(-50%);
+
+        top: 100px;
+        max-width: 200px;
+      }
+    }
+  }
+}
