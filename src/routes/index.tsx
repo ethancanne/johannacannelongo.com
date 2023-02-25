@@ -19,7 +19,8 @@ export const head: DocumentHead = {
   meta: [
     {
       name: 'description',
-      content: 'Johanna Cannelongo is a writer, mom, and teacher.',
+      content:
+        "Johanna is a Jesus follower, wife, mother of eight (four adopted), and writer from Maryland. She created a beautiful garden, 'Gianna's Garden of Hope,' in memory of her daughter who passed away at age six. Johanna is passionate about helping families navigate grief and trauma, and founded the nonprofit Giashope.org to support orphans and the vulnerable.",
     },
   ],
 };
