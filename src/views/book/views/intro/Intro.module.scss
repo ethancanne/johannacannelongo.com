@@ -1,14 +1,13 @@
 @import '../../../../global.scss';
 .container {
   margin-top: -10px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   display: grid;
   grid-template-columns: 1fr 1fr;
   overflow: hidden;
 
   @include mobile {
     grid-template-columns: 1fr;
-    background-color: rgb(248, 247, 245);
   }
   .descriptionContainer {
     display: flex;
@@ -27,6 +26,11 @@
       font-size: 50px;
       margin: 0;
       width: 100%;
+
+      @include mobile {
+        text-align: center;
+        font-size: 40px;
+      }
     }
     .quote {
       width: 100%;
@@ -41,12 +45,23 @@
         color: black;
         font-size: 35px;
       }
+
+      @include mobile {
+        text-align: center;
+
+        font-size: 25px;
+      }
     }
     .introText {
       font-size: 20px;
       line-height: 40px;
       margin-bottom: 70px;
       min-width: 400px;
+      @include mobile {
+        min-width: 0;
+        font-size: 17px;
+        text-align: center;
+      }
     }
     .button {
       font-family: 'Header';
@@ -75,10 +90,29 @@
     height: 100%;
     width: 100%;
 
+    &::before {
+      content: '';
+      //make a gradient overlay from the top to the bottom  of the image with white from the top to transparent at the bottom
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 1) 5%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      @include mobile {
+        display: none;
+      }
+    }
+
     @include mobile {
       order: -1;
       position: initial;
-      padding: 20px;
+      padding: 0px;
       background-position: 100% 100%;
     }
 
@@ -102,30 +136,8 @@
 
       @include mobile {
         display: none;
-        // bottom: -40px;
-        // left: 0;
-        // rotate: 90deg;
-        // img {
-        //   height: 200px;
-        //   width: 100%;
-        // }
-        // &.wave2 {
-        //   bottom: -50px;
-        // }
       }
     }
-
-    //add an overlay to the image
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   background-color: rgba(255, 255, 255, 0.188);
-    //   border-radius: 20px;
-    // }
 
     .image {
       position: relative;
@@ -141,6 +153,7 @@
       @include mobile {
         // left: 0;
         //put this absolute image in the middle
+        margin: 0;
         left: 50%;
         transform: translateX(-50%);
 

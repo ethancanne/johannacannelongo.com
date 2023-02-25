@@ -1,5 +1,6 @@
 import { component$ } from '@builder.io/qwik';
 import styles from './Book.module.scss';
+import DescriptionView from './views/description/Description.view';
 import IntroView from './views/intro/Intro.view';
 
 export default component$(() => {
@@ -13,6 +14,7 @@ export default component$(() => {
         ></path>
       </svg> */}
       <IntroView />
+      <DescriptionView />
     </div>
   );
 });
