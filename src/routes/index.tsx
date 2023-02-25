@@ -2,12 +2,14 @@ import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import AboutView from '~/views/about/About.view';
 import BookView from '~/views/book/Book.view';
+import FooterView from '~/views/footer/Footer.view';
 
 export default component$(() => {
   return (
     <div>
       <AboutView />
       <BookView />
+      <FooterView />
     </div>
   );
 });

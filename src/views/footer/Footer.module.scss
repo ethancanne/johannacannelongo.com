@@ -1,0 +1,27 @@
+@import '../../global.scss';
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+  border-bottom: 10px solid $accent;
+
+  p {
+    margin: 0;
+  }
+  .socialContainer {
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+    .socialLink {
+      text-decoration: none;
+      .socialIcon {
+        color: wheat;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}

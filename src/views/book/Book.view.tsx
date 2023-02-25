@@ -1,7 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 import styles from './Book.module.scss';
-import DescriptionView from './views/description/Description.view';
-import IntroView from './views/intro/Intro.view';
+import DescriptionView1 from './views/2-description/Description.view';
+import DescriptionView2 from './views/3-description/Description.view';
+import IntroView from './views/1-intro/Intro.view';
+import VerseView from './views/5-verse/Verse.view';
+import PhotoListView from './views/4-photoList/PhotoList.view';
 
 export default component$(() => {
   return (
@@ -14,7 +17,10 @@ export default component$(() => {
         ></path>
       </svg> */}
       <IntroView />
-      <DescriptionView />
+      <DescriptionView1 />
+      <DescriptionView2 />
+      <PhotoListView />
+      <VerseView />
     </div>
   );
 });

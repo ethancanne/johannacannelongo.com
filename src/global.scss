@@ -26,7 +26,7 @@
 }
 
 $dark: #707070;
-$background: #ffffff;
+$background: #faf7f4;
 $background-secondary: #ece6da;
 $accent: #ebd8c8;
 $accent-secondary: #9a8d83;
@@ -35,4 +35,5 @@ body {
   font-family: 'Body';
   font-style: normal;
   margin: 0;
+  scroll-behavior: smooth;
 }

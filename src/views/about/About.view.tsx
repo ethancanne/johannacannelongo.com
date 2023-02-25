@@ -7,7 +7,7 @@ export default component$(() => {
   const description = {
     name: 'Johanna Cannelongo',
     description:
-      "I am, first and foremost, a daughter of the King! I am also blessed to be the wife to Brian (an incredible daddy, coach and chef), and I am a grateful mama of 8 amazing children - 4 naturally and 4 'supernaturally' by the gift of adoption. We live in Maryland on a little farmette with many fuzzy barnyard buddies (many who are featured in this story), juicy mulberry trees, and a beautiful garden, 'Gianna's Garden of Hope' which was the inspiration for this special story. <br/> Our unique Garden was started under a 'fallen mulberry tree' from the seed of deep pain after our daughter Gianna Lilyfaith, ran ahead of us to heaven at age 6 in the early spring of 2018. Our garden was planted to honor her bravery, light and joy, and it also became a powerful visual of the hope we have in our Good Glorious Gardener, who's stories never end in death! Our garden grew and multiplied into a harvest of wildflower glory which has given us a beautiful glimpse into the glory of our eternal home and the tangible promise Jesus conquered death, and so will we! He is making all things NEW! <br/> I am passionate about helping families navigate the difficult journey of grief, pain, trauma or loss by offering visuals, story, and language to both the deep sorrow and the deeper Hope we have in God's promises. <br/> My family and I founded GIASHOPE.ORG to grow and bloom love and hope for the orphan, poor, hurting and most vulnerable of this world. We also run a therapy farm, GIASHOPE FARM FRIENDS, to nurture hearts with the gift of God's creation.Thank you for your purchase, a majority of the proceeds from the sales of this book will fund the various initiatives of GIASHOPE.org. I am so thankful to our Redeemer who's stories never end in death! Life wins!",
+      "Johanna is a Jesus follower and so blessed to be the wife to Brian, who is an incredible daddy, coach, and chef. She is a grateful mama of eight amazing children—four naturally and four 'supernaturally' by the gift of adoption. She lives in Maryland on a little farmette with many fuzzy barnyard buddies (many who are featured in 'Hope's Garden Song'), juicy mulberry trees, and a beautiful garden, 'Gianna’s Garden of Hope,' which is featured in her book. <br/>Her unique garden was started under a fallen mulberry tree from the seed of deep pain after her daughter, Gianna Lilyfaith, ran ahead to heaven at age six in the early spring of 2018. Their garden was planted to honor her bravery, light, and joy, and it also became a powerful visual of the hope we all have in our Good Glorious Gardener, whose stories never end in death! <br/>She is a writer, blogger, photography and book lover who has a Bachelor's Degree in Early Childhood Education and has been a teacher for over 20 years. She is passionate about helping families navigate the difficult journey of grief, pain, trauma, or loss by offering visuals, story, and language to both the deep sorrow and the deeper HOPE of God's promises. <br/>Johanna is also passionate about orphan-care and adoption and founded, with her family, a 501(c)(3) Giashope.org to grow and bloom love and hope for the orphan, poor, hurting, and most vulnerable in the world. She also runs a therapy farm, “Gias-Hope Farm Friends,” to nurture hurting hearts with the gift of God’s creation.",
     points: ['Mom', 'Writer', 'Blogger', 'Teacher', 'Blessed'],
     buttons: [
       { text: 'Non-profit', link: 'https://www.giashope.org/' },
@@ -60,11 +60,7 @@ export default component$(() => {
           </div>
         </div>
         <div class={styles.imageContainer}>
-          <img
-            src="https://stopforflowers1.files.wordpress.com/2019/10/johanna-headshot.jpg?w=736"
-            alt="Johanna"
-            class={styles.image}
-          />
+          <img src="/images/johanna.jpeg" alt="Johanna" class={styles.image} />
         </div>
       </div>
       <svg
