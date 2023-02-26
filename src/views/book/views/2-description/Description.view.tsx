@@ -1,11 +1,9 @@
 import { component$ } from '@builder.io/qwik';
 import styles from './Description.module.scss';
 import hopesGardenSong from '../../../../data/hopesGardenSong.json';
-import MarkdownIt from 'markdown-it';
+import markdown from '../../../../utils/markdown.js';
 
 export default component$(() => {
-  const markdown = new MarkdownIt();
-
   return (
     <div class={styles.wrapper} id="bookDescription">
       <svg
@@ -29,7 +27,7 @@ export default component$(() => {
         </div>
         <div
           class={styles.descriptionContainer}
-          dangerouslySetInnerHTML={markdown.render(
+          dangerouslySetInnerHTML={markdown(
             hopesGardenSong.secondBookDescription
           )}
         ></div>

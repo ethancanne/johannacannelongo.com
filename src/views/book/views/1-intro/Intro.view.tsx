@@ -2,12 +2,9 @@ import { component$ } from '@builder.io/qwik';
 import styles from './Intro.module.scss';
 import Arrow from '@/static/arrow.svg';
 import hopesGardenSong from '../../../../data/hopesGardenSong.json';
-
-import MarkdownIt from 'markdown-it';
+import markdown from '../../../../utils/markdown.js';
 
 export default component$(() => {
-  const markdown = new MarkdownIt();
-
   return (
     <div class={styles.container}>
       <div class={styles.descriptionContainer}>
@@ -15,7 +12,7 @@ export default component$(() => {
         <p class={styles.quote}>A powerful allegory</p>
         <div
           class={styles.introText}
-          dangerouslySetInnerHTML={markdown.render(hopesGardenSong.introText)}
+          dangerouslySetInnerHTML={markdown(hopesGardenSong.introText)}
         ></div>
 
         <a href={hopesGardenSong.bookLink.url} class={styles.button}>

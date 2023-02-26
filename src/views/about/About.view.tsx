@@ -3,11 +3,9 @@ import styles from './About.module.scss';
 import FacebookIcon from '@/static/facebook.svg';
 import InstagramIcon from '@/static/instagram.svg';
 import aboutMe from '../../data/aboutMe.json';
-import MarkdownIt from 'markdown-it';
+import markdown from '../../utils/markdown.js';
 
 export default component$(() => {
-  const markdown = new MarkdownIt();
-
   return (
     <div class={styles.wrapper}>
       <div class={styles.container}>
@@ -23,7 +21,7 @@ export default component$(() => {
 
           <div
             class={styles.description}
-            dangerouslySetInnerHTML={markdown.render(aboutMe.description)}
+            dangerouslySetInnerHTML={markdown(aboutMe.description)}
           ></div>
 
           <div class={styles.buttonContainer}>
