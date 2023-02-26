@@ -4,6 +4,7 @@ backend:
   branch: main
 media_folder: /public/images
 public_folder: images
+local_backend: true
 collections:
   - name: about
     label: Johanna Cannelongo's Website
@@ -41,6 +42,9 @@ collections:
             widget: string
           - label: Instagram Link
             name: instagram
+            widget: string
+          - label: Email Address
+            name: email
             widget: string
       - label: Hope's Garden Song
         name: hopesGardenSong

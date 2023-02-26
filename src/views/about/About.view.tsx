@@ -2,6 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import styles from './About.module.scss';
 import FacebookIcon from '@/static/facebook.svg';
 import InstagramIcon from '@/static/instagram.svg';
+import EmailIcon from '@/static/email.svg';
 import aboutMe from '../../data/aboutMe.json';
 import markdown from '../../utils/markdown.js';
 
@@ -46,6 +47,9 @@ export default component$(() => {
                 alt="Instagram"
                 class={styles.socialIcon}
               />
+            </a>
+            <a href={'mailto:' + aboutMe.email} class={styles.socialLink}>
+              <img src={EmailIcon} alt="email" class={styles.socialIcon} />
             </a>
           </div>
         </div>

@@ -2,6 +2,8 @@ import { component$ } from '@builder.io/qwik';
 import styles from './Footer.module.scss';
 import FacebookIcon from '@/static/facebook.svg';
 import InstagramIcon from '@/static/instagram.svg';
+import EmailIcon from '@/static/email.svg';
+
 import aboutMe from '../../data/aboutMe.json';
 
 export default component$(() => {
@@ -14,6 +16,9 @@ export default component$(() => {
         </a>
         <a href={aboutMe.instagram} class={styles.socialLink}>
           <img src={InstagramIcon} alt="Instagram" class={styles.socialIcon} />
+        </a>
+        <a href={'mailto:' + aboutMe.email} class={styles.socialLink}>
+          <img src={EmailIcon} alt="email" class={styles.socialIcon} />
         </a>
       </div>
     </div>
