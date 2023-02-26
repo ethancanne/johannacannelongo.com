@@ -14,7 +14,6 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-        <script src="https://unpkg.com/@wcj/markdown-style"></script>
 
         <RouterHead />
       </head>
