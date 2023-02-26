@@ -3,6 +3,7 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 import AboutView from '~/views/about/About.view';
 import BookView from '~/views/book/Book.view';
 import FooterView from '~/views/footer/Footer.view';
+import MarkdownIt from 'markdown-it';
 
 export default component$(() => {
   return (

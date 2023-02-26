@@ -25,6 +25,7 @@
     "@builder.io/qwik": "0.17.5",
     "@builder.io/qwik-city": "0.1.0",
     "@types/eslint": "8.21.0",
+    "@types/markdown-it": "^12.2.3",
     "@types/node": "^18.11.19",
     "@types/node-fetch": "latest",
     "@typescript-eslint/eslint-plugin": "5.51.0",
@@ -39,5 +40,8 @@
     "undici": "5.18.0",
     "vite": "4.1.1",
     "vite-tsconfig-paths": "3.5.0"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1"
   }
 }

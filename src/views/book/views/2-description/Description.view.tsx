@@ -1,12 +1,10 @@
 import { component$ } from '@builder.io/qwik';
 import styles from './Description.module.scss';
+import hopesGardenSong from '../../../../data/hopesGardenSong.json';
+import MarkdownIt from 'markdown-it';
 
 export default component$(() => {
-  const description = {
-    description:
-      "This story takes place in a special beloved broken garden, among tender, broken-hearted animals that weep over its unexpected destruction from a terrible winter storm right before the highly anticipated celebration of Spring. <br/> The hurting and confused animals, who lose their favorite tree and their precious Lily flower, learn what it means to weep together, grieve together and HOPE together too. In the midst of their journey of pain, a special butterfly friend, named “Hope” teaches them a new song to sing. Through a journey of questioning, doubt, anger, and honest wrestling… <br/> They come to discover that their “Great Gardener” who weeps with them, is always working, always close, always doing a new thing even when they can't see Him.",
-    image: '/images/HopesGarden2.jpeg',
-  };
+  const markdown = new MarkdownIt();
 
   return (
     <div class={styles.wrapper} id="bookDescription">
@@ -25,15 +23,16 @@ export default component$(() => {
         <div class={styles.imageContainer}>
           <img
             class={styles.image}
-            src={description.image}
+            src={hopesGardenSong.secondFeaturedIllustration}
             alt="Hope's Garden Song"
           />
         </div>
-        <div class={styles.descriptionContainer}>
-          {description.description.split('<br/>').map((paragraph) => (
-            <p class={styles.description}>{paragraph}</p>
-          ))}
-        </div>
+        <div
+          class={styles.descriptionContainer}
+          dangerouslySetInnerHTML={markdown.render(
+            hopesGardenSong.secondBookDescription
+          )}
+        ></div>
       </div>
     </div>
   );

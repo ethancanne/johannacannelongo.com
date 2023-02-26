@@ -6,6 +6,8 @@ import IntroView from './views/1-intro/Intro.view';
 import VerseView from './views/5-verse/Verse.view';
 import PhotoListView from './views/4-photoList/PhotoList.view';
 
+//declare prop types
+
 export default component$(() => {
   return (
     <div class={styles.wrapper}>

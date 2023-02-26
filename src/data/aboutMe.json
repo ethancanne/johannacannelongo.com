@@ -1,0 +1,21 @@
+{
+  "description": "Johanna is a Jesus follower and so blessed to be the wife to Brian, who is an incredible daddy, coach, and chef. She is a grateful mama of eight amazing children—four naturally and four 'supernaturally' by the gift of adoption. She lives in Maryland on a little farmette with many fuzzy barnyard buddies (many who are featured in 'Hope's Garden Song'), juicy mulberry trees, and a beautiful garden, 'Gianna’s Garden of Hope,' which is featured in her book.\n\nHer unique garden was started under a fallen mulberry tree from the seed of deep pain after her daughter, Gianna Lilyfaith, ran ahead to heaven at age six in the early spring of 2018. Their garden was planted to honor her bravery, light, and joy, and it also became a powerful visual of the hope we all have in our Good Glorious Gardener, whose stories never end in death!\n\nShe is a writer, blogger, photographer and book lover who has a Bachelor's Degree in Early Childhood Education and has been a teacher for over 20 years. She is passionate about helping families navigate the difficult journey of grief, pain, trauma, or loss by offering visuals, story, and language to both the deep sorrow and the deeper HOPE of God's promises.\n\nJohanna is also passionate about orphan-care and adoption and founded, with her family, a 501(c)(3) Giashope.org to grow and bloom love and hope for the orphan, poor, hurting, and most vulnerable in the world. She also runs a therapy farm, “Gias-Hope Farm Friends,” to nurture hurting hearts with the gift of God’s creation.",
+  "image": "images/johanna.jpeg",
+  "buttons": [
+    {
+      "button": {
+        "text": "Non-profit",
+        "link": "https://giashope.org/"
+      }
+    },
+    {
+      "button": {
+        "text": "Blog",
+        "link": "https://wildflowerhope.com/"
+      }
+    }
+  ],
+  "facebook": "https://www.facebook.com/johanna.cannelongo",
+  "instagram": "https://www.instagram.com/johannacannelongo/",
+  "backgroundImage": "images/garden.jpeg"
+}

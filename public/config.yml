@@ -3,21 +3,89 @@ backend:
   name: git-gateway
   branch: main
 local_backend: true
-media_folder: public/img
-public_folder: img
+media_folder: /public/images
+public_folder: images
 collections:
-  - name: aboutMe
-    label: About Me
+  - name: about
+    label: Johanna Cannelongo's Website
     format: json
     files:
       - label: About Me
-        name: home
-        file: cms/data/aboutMe.json
+        name: aboutMe
+        file: /src/data/aboutMe.json
         fields:
-          - label: Content
-            name: content
-            widget: string
-          - label: Image
-            required: false
+          - label: About Me Description
+            name: description
+            widget: markdown
+          - label: Image of Johanna
             name: image
             widget: image
+          - label: Background Image
+            name: backgroundImage
+            widget: image
+          - label: Buttons
+            name: buttons
+            widget: list
+            fields:
+              - label: Button Information
+                name: button
+                widget: object
+                fields:
+                  - label: Button Text
+                    name: text
+                    widget: string
+                  - label: Button Link
+                    name: link
+                    widget: string
+          - label: Facebook Link
+            name: facebook
+            widget: string
+          - label: Instagram Link
+            name: instagram
+            widget: string
+      - label: Hope's Garden Song
+        name: hopesGardenSong
+        file: /src/data/hopesGardenSong.json
+        fields:
+          - label: Book Intro Text
+            name: introText
+            widget: markdown
+          - label: Second Book Description
+            name: secondBookDescription
+            widget: markdown
+          - label: Third Book Description
+            name: thirdBookDescription
+            widget: markdown
+
+          - label: First Featured Illustration
+            name: firstFeaturedIllustration
+            widget: image
+          - label: Second Featured Illustration
+            name: secondFeaturedIllustration
+            widget: image
+          - label: Third Featured Illustration
+            name: thirdFeaturedIllustration
+            widget: image
+
+          - label: Book Link
+            name: bookLink
+            widget: object
+            fields:
+              - label: Link Text
+                name: text
+                widget: string
+              - label: Link URL
+                name: url
+                widget: string
+
+          - label: Image Carousel
+            name: imageCarousel
+            widget: list
+            fields:
+              - label: Image
+                name: image
+                widget: image
+              - label: Image Description
+                name: description
+                widget: string
+                required: false

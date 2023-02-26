@@ -2,40 +2,32 @@ import { component$ } from '@builder.io/qwik';
 import styles from './About.module.scss';
 import FacebookIcon from '@/static/facebook.svg';
 import InstagramIcon from '@/static/instagram.svg';
+import aboutMe from '../../data/aboutMe.json';
+import MarkdownIt from 'markdown-it';
 
 export default component$(() => {
-  const description = {
-    name: 'Johanna Cannelongo',
-    description:
-      "Johanna is a Jesus follower and so blessed to be the wife to Brian, who is an incredible daddy, coach, and chef. She is a grateful mama of eight amazing children—four naturally and four 'supernaturally' by the gift of adoption. She lives in Maryland on a little farmette with many fuzzy barnyard buddies (many who are featured in 'Hope's Garden Song'), juicy mulberry trees, and a beautiful garden, 'Gianna’s Garden of Hope,' which is featured in her book. <br/>Her unique garden was started under a fallen mulberry tree from the seed of deep pain after her daughter, Gianna Lilyfaith, ran ahead to heaven at age six in the early spring of 2018. Their garden was planted to honor her bravery, light, and joy, and it also became a powerful visual of the hope we all have in our Good Glorious Gardener, whose stories never end in death! <br/>She is a writer, blogger, photography and book lover who has a Bachelor's Degree in Early Childhood Education and has been a teacher for over 20 years. She is passionate about helping families navigate the difficult journey of grief, pain, trauma, or loss by offering visuals, story, and language to both the deep sorrow and the deeper HOPE of God's promises. <br/>Johanna is also passionate about orphan-care and adoption and founded, with her family, a 501(c)(3) Giashope.org to grow and bloom love and hope for the orphan, poor, hurting, and most vulnerable in the world. She also runs a therapy farm, “Gias-Hope Farm Friends,” to nurture hurting hearts with the gift of God’s creation.",
-    points: ['Mom', 'Writer', 'Blogger', 'Teacher', 'Blessed'],
-    buttons: [
-      { text: 'Non-profit', link: 'https://www.giashope.org/' },
-      {
-        text: 'Blog',
-        link: 'https://www.wildflowerhope.com/',
-      },
-    ],
-    facebook: 'https://www.facebook.com/johanna.cannelongo',
-    instagram: 'https://www.instagram.com/johannacannelongo/',
-  };
+  const markdown = new MarkdownIt();
+
   return (
     <div class={styles.wrapper}>
       <div class={styles.container}>
         <div class={styles.descriptionContainer}>
           <h1 class={styles.name}>
-            <span>{description.name}</span>
+            <span>Johanna Cannelongo</span>
           </h1>
           {/* <div class={styles.pointsContainer}>
           {description.points.map((point) => (
             <p class={styles.point}>{point}</p>
           ))}
         </div> */}
-          {description.description.split('<br/>').map((paragraph) => (
-            <p class={styles.description}>{paragraph}</p>
-          ))}
+
+          <div
+            class={styles.description}
+            dangerouslySetInnerHTML={markdown.render(aboutMe.description)}
+          ></div>
+
           <div class={styles.buttonContainer}>
-            {description.buttons.map((button) => (
+            {aboutMe.buttons.map(({ button }: any) => (
               <a class={styles.button} href={button.link}>
                 {button.text}
               </a>
@@ -43,14 +35,14 @@ export default component$(() => {
           </div>
 
           <div class={styles.socialContainer}>
-            <a href={description.facebook} class={styles.socialLink}>
+            <a href={aboutMe.facebook} class={styles.socialLink}>
               <img
                 src={FacebookIcon}
                 alt="Facebook"
                 class={styles.socialIcon}
               />
             </a>
-            <a href={description.instagram} class={styles.socialLink}>
+            <a href={aboutMe.instagram} class={styles.socialLink}>
               <img
                 src={InstagramIcon}
                 alt="Instagram"
@@ -59,8 +51,11 @@ export default component$(() => {
             </a>
           </div>
         </div>
-        <div class={styles.imageContainer}>
-          <img src="/images/johanna.jpeg" alt="Johanna" class={styles.image} />
+        <div
+          class={styles.imageContainer}
+          style={{ backgroundImage: `url("${aboutMe.backgroundImage}")` }}
+        >
+          <img src={aboutMe.image} alt="Johanna" class={styles.image} />
         </div>
       </div>
       <svg
