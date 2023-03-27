@@ -21,6 +21,11 @@
       img {
         display: block;
         max-width: 200px;
+        min-height: 320px;
+        max-height: 320px;
+
+        object-fit: cover;
+
         height: auto;
       }
 

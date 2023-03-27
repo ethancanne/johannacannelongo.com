@@ -5,6 +5,7 @@ import DescriptionView2 from './views/3-description/Description.view';
 import IntroView from './views/1-intro/Intro.view';
 import VerseView from './views/5-verse/Verse.view';
 import PhotoListView from './views/4-photoList/PhotoList.view';
+import TrailerView from './views/3-trailer/Trailer.view';
 
 //declare prop types
 
@@ -21,6 +22,7 @@ export default component$(() => {
       <IntroView />
       <DescriptionView1 />
       <DescriptionView2 />
+      <TrailerView />
       <PhotoListView />
       <VerseView />
     </div>
