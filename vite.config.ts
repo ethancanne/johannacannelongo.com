@@ -6,29 +6,7 @@ import vsharp from 'vite-plugin-vsharp';
 
 export default defineConfig(() => {
   return {
-    plugins: [
-      qwikCity(),
-      qwikVite(),
-      tsconfigPaths(),
-      vsharp({
-        includePublic: [],
-        excludePublic: [],
-        exclude: [],
-        '.jpg': {
-          quality: 5,
-        },
-        '.jpeg': {
-          quality: 5,
-        },
-        '.png': {
-          quality: 5,
-          palette: true,
-        },
-        '.webp': {
-          lossless: true,
-        },
-      }),
-    ],
+    plugins: [qwikCity(), qwikVite(), tsconfigPaths()],
     preview: {
       headers: {
         'Cache-Control': 'public, max-age=600',
