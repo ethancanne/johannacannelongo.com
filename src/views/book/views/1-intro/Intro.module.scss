@@ -138,8 +138,8 @@
       position: relative;
       left: -140px;
       border-radius: 10px;
-      max-width: 350px;
-      max-height: 600px;
+      // max-width: 350px;
+      // max-height: 600px;
       z-index: 3;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
         rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
@@ -154,6 +154,7 @@
 
         top: 100px;
         max-width: 200px;
+        max-height: 260px;
       }
     }
   }

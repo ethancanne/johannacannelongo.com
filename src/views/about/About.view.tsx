@@ -57,7 +57,14 @@ export default component$(() => {
           class={styles.imageContainer}
           style={{ backgroundImage: `url("${aboutMe.backgroundImage}")` }}
         >
-          <img src={aboutMe.image} alt="Johanna" class={styles.image} />
+          <img
+            loading="lazy"
+            src={aboutMe.image}
+            width={300}
+            height={460}
+            alt="Johanna"
+            class={styles.image}
+          />
         </div>
       </div>
       <svg

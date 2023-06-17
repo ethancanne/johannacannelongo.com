@@ -25,7 +25,7 @@ export default component$(() => {
             element!.scrollIntoView({ behavior: 'smooth' });
           }}
         >
-          <img src={Arrow} alt="Scroll Down" />
+          <img src={Arrow} width={50} height={50} alt="Scroll Down" />
         </div>
       </div>
 
@@ -40,8 +40,12 @@ export default component$(() => {
         </div>
 
         <img
+          loading="lazy"
+          width="300"
+          height="400"
+          role="presentation"
           class={styles.image}
-          src="/images/bookFront.jpg"
+          src="/images/bookFront.webp"
           alt="Hope's Garden Song"
         />
       </div>

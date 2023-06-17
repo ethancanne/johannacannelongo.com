@@ -20,7 +20,10 @@ export default component$(() => {
       <div class={styles.container}>
         <div class={styles.imageContainer}>
           <img
+            loading="lazy"
             class={styles.image}
+            width="300"
+            height="600"
             src={hopesGardenSong.secondFeaturedIllustration}
             alt="Hope's Garden Song"
           />

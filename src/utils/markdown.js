@@ -134,7 +134,7 @@ export default function markdown(src) {
   replace(rx_link, function (all, p1, p2, p3, p4, p5, p6) {
     stash[--si] = p4
       ? p2
-        ? '<img src="' + p4 + '" alt="' + p3 + '"/>'
+        ? '<img loading="lazy" src="' + p4 + '" alt="' + p3 + '"/>'
         : '<a href="' + p4 + '">' + unesc(highlight(p3)) + '</a>'
       : p6;
     return si + '\uf8ff';
