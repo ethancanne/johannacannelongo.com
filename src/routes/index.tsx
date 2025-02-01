@@ -6,7 +6,7 @@ import FooterView from '~/views/footer/Footer.view';
 
 export default component$(() => {
   return (
-    <div>
+    <div class={'container'}>
       <AboutView />
       <BookView />
       <FooterView />

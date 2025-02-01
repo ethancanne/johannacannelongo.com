@@ -9,7 +9,10 @@ import aboutMe from '../../data/aboutMe.json';
 export default component$(() => {
   return (
     <div class={styles.container}>
-      <p>Copyright © 2023 Johanna Cannelongo. All rights reserved.</p>
+      <p>
+        Copyright © {new Date().getFullYear()} Johanna Cannelongo. All rights
+        reserved.
+      </p>
       <div class={styles.socialContainer}>
         <a href={aboutMe.facebook} class={styles.socialLink}>
           <img src={FacebookIcon} alt="Facebook" class={styles.socialIcon} />
