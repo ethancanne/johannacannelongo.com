@@ -35,16 +35,20 @@ $background-secondary: #ece6da;
 $accent: #ebd8c8;
 $accent-secondary: #9a8d83;
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+
   background-color: $background;
   font-family: 'Body';
   font-style: normal;
-  margin: 0;
+  // margin: 0;
   scroll-behavior: smooth;
 
   .container {
+    margin: 0 auto;
+
     max-width: 2000px;
   }
 }
